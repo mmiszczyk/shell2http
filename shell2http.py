@@ -20,5 +20,5 @@ def shellHTTPRequestHandler():
 
     return ShellHTTPRequestHandler
 
-with HTTPServer(('', args.port), shellHTTPRequestHandler(args)) as httpd:
+with HTTPServer(('', 8000), shellHTTPRequestHandler()) as httpd:
         httpd.serve_forever()
